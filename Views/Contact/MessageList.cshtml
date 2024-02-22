@@ -1,0 +1,35 @@
+﻿@model List<DevFolio.Models.TblContact>
+@{
+    Layout = null;
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<br />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Mesaj No</th>
+            <th>Gönderen</th>
+            <th>E-mail</th>
+            <th>Konu</th>
+            <th>Tarih</th>
+            <th>Okundu Bilgisi</th>
+            <th>Mesajı Aç</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.ContactId</td>
+        <td>@item.NameSurname</td>
+        <td>@item.Email</td>
+        <td>@item.Subject</td>
+        <td>@item.SendMessageDate</td>
+        <td>@item.IsRead</td>
+        <td><a href="#" class="btn btn-warning">Mesajı Aç</a></td>
+    </tr>
+          
+        }
+
+    </table>
+</div>

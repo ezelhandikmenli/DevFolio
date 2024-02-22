@@ -1,0 +1,53 @@
+﻿@model DevFolio.Models.TblContact
+<div class="col-md-6">
+    <div class="title-box-2">
+        <h5 class="title-left">
+            Mesaj Gönder
+        </h5>
+    </div>
+    <div>
+        <form action="" method="post" role="form" class="contactForm">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <input type="text" name="NameSurname"  value="@(Model != null ? Model.NameSurname : "")" class="form-control" id="NameSurname" placeholder="Adınız" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="Email"  value="@(Model != null ? Model.Email : "")" id="Email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="Subject"  value="@(Model != null ? Model.Subject : "")" placeholder="Konu" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <textarea class="form-control" name="Message"  value="@(Model != null ? Model.Message : "")" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mesajınızı Buraya Yazabilirsiniz"></textarea>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="button button-a button-big button-rouded">Gönder</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    @if (ViewBag.show == true)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Mesajın Gönderildi!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+</div>
+

@@ -1,0 +1,22 @@
+﻿@model DevFolio.Models.TblAddress
+@{
+    ViewBag.Title = "CreateAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Adres Ekleme</h2>
+<form method="post">
+    <label>Adres Adı</label>
+    <input type="text" class="form-control" name="Description"  />
+    <br />
+    <label>Lokasyon</label>
+    <input type="text" class="form-control" name="Location" />
+    <br />
+    <label>Telefon</label>
+    <input type="text" class="form-control" name="PhoneNumber" />
+    <br />
+    <label>Email</label>
+    <input type="text" class="form-control" name="Email" />
+    <br />
+    <button class="btn btn-info">Adresi Kaydet</button>
+</form>

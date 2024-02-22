@@ -1,0 +1,13 @@
+﻿@model DevFolio.Models.TblAbout
+@{
+    ViewBag.Title = "CreateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<h2>Yeni Hakkımda Bölümü Ekleme</h2>
+<form method="post">
+    <label>Açıklama</label>
+    <input  type="text" class="form-control" name="Description" />
+    <br />
+    <button class="btn btn-info"> Açıklamayı Kaydet</button>
+</form>
+

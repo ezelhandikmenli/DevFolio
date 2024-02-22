@@ -1,0 +1,17 @@
+﻿@model DevFolio.Models.TblSocialMedia
+@{
+    ViewBag.Title = "CreateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Sosyal Medya Girişi</h2>
+<form method="post">
+    <label>Sosyal Medya Adı</label>
+    <input type="text" class="form-control" name="PlatformName"/>
+    <br />
+    <label>Sosyal Medya Durumu</label>
+    <input type="text" class="form-control" name="Status"/>
+    <br />
+    <button class="btn btn-info">Sosyal Medyayı Kaydet</button>
+</form>
+
