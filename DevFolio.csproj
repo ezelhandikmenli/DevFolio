@@ -499,10 +499,13 @@
     <Content Include="Views\Default\PartialSendMessage.cshtml" />
     <Content Include="Views\Default\PartialAddress.cshtml" />
     <Content Include="Views\Admin\AdminLogin.cshtml" />
+    <Content Include="Views\AdminLayout\Dashboard.cshtml" />
+    <Content Include="Views\Feature\FeatureList.cshtml" />
+    <Content Include="Views\Feature\CreateFeature.cshtml" />
+    <Content Include="Views\Feature\UpdateFeature.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Feature\" />
     <Folder Include="Views\Profile\" />
   </ItemGroup>
   <ItemGroup>
