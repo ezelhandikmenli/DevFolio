@@ -8,7 +8,7 @@ namespace DevFolio.Controllers
 {
     public class ContactController : Controller
     {
-        DbDevFolioEntities6 db = new DbDevFolioEntities6();
+        DbDevFolioEntities7 db = new DbDevFolioEntities7();
         [HttpGet] 
         public ActionResult ContactInfo()
         {

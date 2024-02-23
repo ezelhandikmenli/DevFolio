@@ -8,7 +8,7 @@ namespace DevFolio.Controllers
 {
     public class AboutController : Controller
     {
-        DbDevFolioEntities6 db = new DbDevFolioEntities6();
+        DbDevFolioEntities7 db = new DbDevFolioEntities7();
         public ActionResult AboutList()
         {
             var values = db.TblAbout.ToList();

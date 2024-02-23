@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DbDevFolioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DbDevFolioModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -138,7 +138,7 @@
         </Association>
         <Function Name="GetLastServiceTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="GetLastSkillTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <EntityContainer Name="DbDevFolioModelStoreContainer">
+        <EntityContainer Name="DbDevFolioModel1StoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAddress" EntityType="Self.TblAddress" Schema="dbo" store:Type="Tables" />
@@ -157,10 +157,11 @@
             <End Role="TblProject" EntitySet="TblProject" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DbDevFolioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DbDevFolioModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -294,7 +295,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DbDevFolioEntities6" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DbDevFolioEntities7" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" />
           <EntitySet Name="TblAddress" EntityType="Self.TblAddress" />
@@ -312,17 +313,17 @@
             <End Role="TblCategory" EntitySet="TblCategory" />
             <End Role="TblProject" EntitySet="TblProject" />
           </AssociationSet>
-          <FunctionImport Name="GetLastSkillTitle" ReturnType="Collection(String)" />
           <FunctionImport Name="GetLastServiceTitle" ReturnType="Collection(String)" />
+          <FunctionImport Name="GetLastSkillTitle" ReturnType="Collection(String)" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DbDevFolioModelStoreContainer" CdmEntityContainer="DbDevFolioEntities6">
+        <EntityContainerMapping StorageEntityContainer="DbDevFolioModel1StoreContainer" CdmEntityContainer="DbDevFolioEntities7">
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DbDevFolioModel.sysdiagrams">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -333,7 +334,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblAbout">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblAbout">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblAbout">
               <MappingFragment StoreEntitySet="TblAbout">
                 <ScalarProperty Name="AboutID" ColumnName="AboutID" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -341,7 +342,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblAddress">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblAddress">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblAddress">
               <MappingFragment StoreEntitySet="TblAddress">
                 <ScalarProperty Name="AddressId" ColumnName="AddressId" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
@@ -352,7 +353,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblAdmin">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblAdmin">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblAdmin">
               <MappingFragment StoreEntitySet="TblAdmin">
                 <ScalarProperty Name="AdminId" ColumnName="AdminId" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
@@ -361,7 +362,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblCategory">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblCategory">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblCategory">
               <MappingFragment StoreEntitySet="TblCategory">
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
@@ -369,7 +370,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblContact">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblContact">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblContact">
               <MappingFragment StoreEntitySet="TblContact">
                 <ScalarProperty Name="ContactId" ColumnName="ContactId" />
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
@@ -382,7 +383,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblFeature">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblFeature">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblFeature">
               <MappingFragment StoreEntitySet="TblFeature">
                 <ScalarProperty Name="FeatureId" ColumnName="FeatureId" />
                 <ScalarProperty Name="HeaderTitle" ColumnName="HeaderTitle" />
@@ -391,7 +392,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblProfile">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblProfile">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblProfile">
               <MappingFragment StoreEntitySet="TblProfile">
                 <ScalarProperty Name="ProfileId" ColumnName="ProfileId" />
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
@@ -402,7 +403,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblProject">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblProject">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblProject">
               <MappingFragment StoreEntitySet="TblProject">
                 <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
@@ -413,7 +414,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblService">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblService">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblService">
               <MappingFragment StoreEntitySet="TblService">
                 <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
                 <ScalarProperty Name="ServiceTitle" ColumnName="ServiceTitle" />
@@ -423,7 +424,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblSkill">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblSkill">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblSkill">
               <MappingFragment StoreEntitySet="TblSkill">
                 <ScalarProperty Name="SkillID" ColumnName="SkillID" />
                 <ScalarProperty Name="SkillTitle" ColumnName="SkillTitle" />
@@ -432,7 +433,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblSocialMedia">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblSocialMedia">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblSocialMedia">
               <MappingFragment StoreEntitySet="TblSocialMedia">
                 <ScalarProperty Name="SocialMediaId" ColumnName="SocialMediaId" />
                 <ScalarProperty Name="PlatformName" ColumnName="PlatformName" />
@@ -443,7 +444,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TblTestimonial">
-            <EntityTypeMapping TypeName="DbDevFolioModel.TblTestimonial">
+            <EntityTypeMapping TypeName="DbDevFolioModel1.TblTestimonial">
               <MappingFragment StoreEntitySet="TblTestimonial">
                 <ScalarProperty Name="TestimonialId" ColumnName="TestimonialId" />
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
@@ -453,8 +454,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="GetLastSkillTitle" FunctionName="DbDevFolioModel.Store.GetLastSkillTitle" />
-          <FunctionImportMapping FunctionImportName="GetLastServiceTitle" FunctionName="DbDevFolioModel.Store.GetLastServiceTitle" />
+          <FunctionImportMapping FunctionImportName="GetLastServiceTitle" FunctionName="DbDevFolioModel1.Store.GetLastServiceTitle" />
+          <FunctionImportMapping FunctionImportName="GetLastSkillTitle" FunctionName="DbDevFolioModel1.Store.GetLastSkillTitle" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

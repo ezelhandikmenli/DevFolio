@@ -8,7 +8,7 @@ namespace DevFolio.Controllers
 {
     public class ProfileController : Controller
     {
-        DbDevFolioEntities6 db = new DbDevFolioEntities6();
+        DbDevFolioEntities7 db = new DbDevFolioEntities7();
         public ActionResult ProfileList()
         {
             var values = db.TblProfile.ToList();

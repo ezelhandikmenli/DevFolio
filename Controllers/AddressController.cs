@@ -9,7 +9,7 @@ namespace DevFolio.Controllers
 {
     public class AddressController : Controller
     {
-        DbDevFolioEntities6 db = new DbDevFolioEntities6();
+        DbDevFolioEntities7 db = new DbDevFolioEntities7();
         public ActionResult AddressList()
         {
             var value = db.TblAddress.ToList();

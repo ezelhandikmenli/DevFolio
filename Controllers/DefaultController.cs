@@ -9,7 +9,7 @@ namespace DevFolio.Controllers
 {
     public class DefaultController : Controller
     {
-        DbDevFolioEntities6 db = new DbDevFolioEntities6();
+        DbDevFolioEntities7 db = new DbDevFolioEntities7();
         public ActionResult Index()
         {
             return View();

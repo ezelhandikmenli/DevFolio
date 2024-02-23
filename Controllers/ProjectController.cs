@@ -9,7 +9,7 @@ namespace DevFolio2.Controllers
 {
     public class ProjectController : Controller
     {
-        DbDevFolioEntities6 db = new DbDevFolioEntities6();
+        DbDevFolioEntities7 db = new DbDevFolioEntities7();
 
         public void CategoryList()
         {
