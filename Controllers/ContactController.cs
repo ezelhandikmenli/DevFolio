@@ -9,6 +9,12 @@ namespace DevFolio.Controllers
     public class ContactController : Controller
     {
         DbDevFolioEntities6 db = new DbDevFolioEntities6();
+        [HttpGet] 
+        public ActionResult ContactInfo()
+        {
+            var values = db.TblAddress.ToList();
+            return View(values);
+        }
         [HttpGet]
         public ActionResult SendMessage()
         {
