@@ -22,6 +22,9 @@ namespace DevFolio.Controllers
             ViewBag.lastSkillTitleName = db.GetLastSkillTitle().FirstOrDefault();
             ViewBag.coreCategoryProjectCount = db.TblProject.Where(x => x.ProjectCategory == 1).Count();
             ViewBag.lastServiceTitleName = db.GetLastServiceTitle().FirstOrDefault();
+            ViewBag.FirstProject = db.TblProject.OrderBy(x => x.ProjectID).FirstOrDefault().Title;
+            ViewBag.SocialCount = db.TblSocialMedia.Count();
+            ViewBag.CategoryFirst = db.TblCategory.OrderBy(x => x.CategoryId).FirstOrDefault().CategoryName;
             return View();
         }
     }

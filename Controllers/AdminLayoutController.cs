@@ -28,13 +28,6 @@ namespace DevFolio.Controllers
         {
             return PartialView();
         }
-        public PartialViewResult Dashboard()
-        {
-            ViewBag.messageBox = db.TblContact.Where(x => x.IsRead == false).Count().ToString();
-            DateTime dt = Convert.ToDateTime(db.TblProject.Max(x => x.CreatedDate));
-            ViewBag.lastProjectDate = dt.ToString("dd/MM/yyyy");
-            ViewBag.Reference = db.TblTestimonial.Count().ToString();
-            return PartialView();
-        }
+      
     }
 }
