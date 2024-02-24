@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="DbDevFolioModel1.TblAbout" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbDevFolioModel1.TblAddress" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbDevFolioModel1.TblAdmin" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbDevFolioModel1.TblCategory" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbDevFolioModel1.TblCategory" Width="1.5" PointX="0.5" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DbDevFolioModel1.TblContact" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbDevFolioModel1.TblFeature" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbDevFolioModel1.TblProfile" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
